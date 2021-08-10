@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normal-flow</title>
+    <link rel="stylesheet" href="normal-flow.css">
+</head>
+<body>
+    <h1>Basic document flow</h1>
+    <p>I am a basic block level element. My adjeacnet block level elements sit on new lines below me.</p>
+    <p>By default we span 100% of the width of our parent elements, and we are as our child content. Our total width and height is our content + padding + border width/height.</p>
+    <p>We are separated by our margins. Because of martgin collapsing, we are separated by th width of one of our margins, not both.</p>
+    <p>inline elemnts <span>like this one</span> and <span>this one </span> sit on the same line along adjacent text nodes, if there is space ont eh same line. Overflowing inline elements will <span>wrap onto a new line if possible (like this one containing text)</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg" alt=""></p>
+</body>
+</html>

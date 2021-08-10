@@ -1,0 +1,88 @@
+html {
+    font-size: 10px;
+    padding: 0px;
+}
+* {
+    box-sizing: border-box;
+}
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1.2;
+}
+ 
+section h2, aside h2 {
+    font-size: 2rem;
+    letter-spacing: 2;
+}
+section p{
+    text-indent: 20px;
+}
+section p,aside li,section li {
+    font-size: 1.7rem;
+    line-height: 1.6;
+}
+body {
+    margin: 0px auto; 
+    min-width: 1000px;
+    max-width: 1400px;
+} 
+section { 
+    float: left;
+    width: 50%;
+}
+
+aside {
+    float: left;
+    width: 30%;
+}
+
+nav {
+    float: left;
+    width: 20%;
+}
+footer {
+    clear: both;
+}
+
+header, section, aside, footer {
+    padding: 20px;
+}
+
+header, footer {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+}
+
+a {
+    color:#a66; 
+}
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    /* width: 100%; */
+    /* border: 1px solid black; */
+}
+nav li {
+    margin: 40px 0px;
+}
+nav li a{
+    display: inline-block;
+    outline: none;
+    text-decoration: none;
+    color: #a66;
+    font-size: 3em;
+    border: 2px solid #a66;
+    line-height: 2;
+    width: 100%;
+    text-align: center;
+    /* margin-right: 40px; */
+}
+a:hover {
+    background-color: #a66;
+    color: white;
+}

@@ -1,0 +1,14 @@
+body {
+    font-size: 2em;
+    margin: 0px auto;
+    padding: 20px;
+    /* width: max-content; */
+    height: 2400px;
+}
+dt {
+    background-color: black;
+    color: white;
+    position: sticky;
+    top: 0px;
+    
+}

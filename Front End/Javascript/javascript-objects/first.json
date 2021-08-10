@@ -1,0 +1,12 @@
+{
+    "name": "Ankish",
+    "age": 21,
+    "Married": false,
+    "Gender": "Male",
+    "BloodGroup": null,
+    "shopItem": ["Computer","Mouse","fridge","AirConditioner"],
+    "myObj": {
+        "name": "nested",
+        "marks": 45
+    }
+}

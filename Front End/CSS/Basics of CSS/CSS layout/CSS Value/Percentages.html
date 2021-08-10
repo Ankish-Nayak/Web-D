@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        .wrapper div {
+            border: 4px solid blue;
+            padding: 10px;
+            margin: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: lightblue;
+        }
+        /* .box-3 {
+            
+        } */
+        .subbox-1 , .subbox-2 {
+            padding-inline-start: 0px;
+            margin-inline-start: 0px;
+        }
+        .box-1 {
+            width: 200px;
+        }
+        .box-2 {
+            width: 40%;
+        }
+        .box-3 {
+            width: 50%;
+            padding: 0px;
+            background-color: white;
+            border-color: red;
+        }
+        .subbox-1 {
+            width: 200px;
+        }
+        .subbox-2 {
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box-1">
+            <p>
+            I am 200 px wide
+            </p>        
+        </div>
+        <div class="box-2">
+            <p>
+            I am 40% wide
+            </p>
+        </div>
+        <div class="box-3">
+            <div class="subbox-1">
+                <p>
+                I am 200px wide
+                </p>            
+            </div>
+            <div class="subbox-2">
+                <p>
+                I am 40% wide
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

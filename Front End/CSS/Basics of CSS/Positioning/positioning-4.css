@@ -1,0 +1,20 @@
+.wrapper {
+    font-size: 1.4em;
+    border: 5px solid grey;
+    margin: 20px;
+    padding: 10px;
+    font-family: sans-serif;
+    position: relative;
+}
+
+.target {
+    box-sizing: border-box;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(207,232,220);    
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}

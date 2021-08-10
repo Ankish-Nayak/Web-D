@@ -1,0 +1,20 @@
+body {
+    font-size: 1.5em;
+    font-family: sans-serif;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.box {
+    background-color: rgb(207,232,220);
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    padding: 20px;
+    float: left;
+    margin: 20px;
+    margin-right: 20px;
+}
+.cleared {
+    clear: left;
+}

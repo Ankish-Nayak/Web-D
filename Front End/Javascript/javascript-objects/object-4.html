@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title> 
+</head>
+<body>
+    <section>
+
+    </section>
+    <script>
+        const section  = document.querySelector('section');
+        let para1 = document.createElement('p');
+        let para2 = document.createElement('p');
+        let motherInfo = 'The mother cats are called ';
+        let kittenInfo;
+
+        let requestURL = 'obect-4.json';
+        let request = new XMLHttpRequest();
+
+        request.open('GET',requestURL);
+        request.responseType = 'json';
+        request.send();
+        const catInfo = request.response;
+
+        for(let i = 0; i<catInfo.length; ++i){
+            if(i === catInfo.length-1){
+                motherInfo += catInfo['name'];
+            }else{
+                motherInfo += catInfo['name'] + ', ';
+            }
+            for(let j = 0; j<catInfo['kittens'].length; ++i){
+                total++;
+                if(catInfo['kittens']['gender'] === 'm'){
+                    male++;
+                }
+            }
+        }
+        kittenInfo = `There are ${total} kittens out of which ${male} are males and ${total-male} are females`;
+        para1.textContent = motherInfo;
+        para2.textContent = kittenInfo;
+        section.appendChild(para1);
+        section.appendChild(para2);
+
+    </script>
+</body>
+</html>

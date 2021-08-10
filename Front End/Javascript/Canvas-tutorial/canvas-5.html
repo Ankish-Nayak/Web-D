@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas-5</title>
+    <style>
+        body {
+            margin: 0px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <canvas class="myCanvas">
+        <p>Add suitable fallback here.</p>
+    </canvas>    
+    <script>
+        const canvas = document.querySelector('.myCanvas');
+        const width = canvas.width = window.innerWidth;
+        const height = canvas.height = window.innerHeight;
+        const ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = 'rgb( 0, 0, 0)';
+        ctx.fillRect( 0, 0, width, height);
+        
+        ctx.strokeStyle = 'white';
+        ctx.lineWidth = 1;
+        ctx.font = '36px arial';
+        ctx.strokeText('Canvas Text', 50, 50);
+        
+        ctx.fillStyle = 'red';
+        ctx.font = '40px georgia';
+        ctx.fillText('Canvas Text', 50, 150);
+ 
+        ctx.fillStyle = 'blue';
+        ctx.font = '40px sans-serif';
+        ctx.fillText( 'Canvas Text', 50, 250);
+    </script> 
+</body>
+</html>

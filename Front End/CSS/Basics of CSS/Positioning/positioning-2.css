@@ -1,0 +1,21 @@
+body {
+    font-size: 1.2em;
+    margin: 0px auto;
+    padding: 10px;
+    text-align: justify;
+}
+
+.sticky {
+    position: sticky;
+    top: 20px;
+    left: 20px;
+    border: 1px solid rgb(216, 123, 123);
+    background-color:rgb(216, 123, 123, 0.4); 
+    color: black;
+    text-align: center;
+    line-height: 30px;
+    width: max-content;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+}

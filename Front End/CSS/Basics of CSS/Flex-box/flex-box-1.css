@@ -1,0 +1,16 @@
+.wrapper {
+    display: flex;
+    border: 2px solid black;
+}
+
+.wrapper > div {
+    flex: 1;
+}
+.box-1, .box-2, .box-3 {
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 2em;
+    background-color: blanchedalmond;
+    text-align: center;
+    padding: 0px 20px;
+}

@@ -1,0 +1,47 @@
+html, body {
+    padding: 0px;
+    margin: 0px;    
+}
+
+body {
+    background-color: yellow;
+    height: 2000px;
+}
+
+section {
+    display: flex;
+}
+article {
+    flex: 1;
+    height: 400px;
+    background-image: url(bgtile.png);
+    overflow: auto;
+    margin: 10px;
+}
+
+code {
+    /* all: initial;? */
+    color: white;
+}
+p {
+    margin: 20px;
+    margin-top: 30px;
+    background-color: rgba(0,0,0,0.3);
+    font-size: 1.2em; 
+    color: white;
+}
+article pre {
+    height: 400px;
+}
+
+.fixed {
+    background-attachment: fixed;
+}
+
+.local {
+    background-attachment: local;
+}
+
+.scroll {
+    background-attachment: scroll;
+}

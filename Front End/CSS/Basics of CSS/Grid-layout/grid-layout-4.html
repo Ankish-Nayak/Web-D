@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-layout-4</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-auto-rows: 100px;
+            justify-items: strech; 
+            grid-gap: 1em;
+        }
+        .wrapper > div{
+            background-color: beige;
+        }
+        .wrapper div:nth-child(odd) {
+            background-color: rgb(139, 139, 83);
+        }
+        .box1 {
+            grid-column: 1/3;
+            grid-row: 1/3;
+            /* justify-self: start; */
+        }
+        .box2 {
+            grid-row: 1/3;
+            /* justify-self: end; */
+        }
+        .box3 {
+            /* justify-self: center; */
+        }
+        .box5 {
+            grid-row: 3/6;
+            grid-column: 3;
+            /* align-self: start; */
+        }
+        .box4 {
+            grid-row: 3/6;
+            grid-column: 2/3;  
+            /* align-self: end; */
+        }
+        .box6 {
+            grid-row: 4/6;
+            /* align-self: center; */
+        }
+        .wrapper > div {
+            font-size: 1.3em;
+            text-align: center; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box1">Box1</div>
+        <div class="box2">Box2</div>
+        <div class="box3">Box3</div>
+        <div class="box4">Box4</div>
+        <div class="box5">Box5</div>
+        <div class="box6">Box6</div>
+    </div>
+</body>
+</html>

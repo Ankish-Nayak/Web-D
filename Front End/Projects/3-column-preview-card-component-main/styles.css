@@ -1,0 +1,95 @@
+body {
+    position: absolute;
+    width: 100%;
+    height: 800px; 
+    margin: 0px 0px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 2px solid blue;  */
+    font-size: 15px;
+    background-color: hsl(0, 0%, 95%);
+    /* padding: 170px 260px ; */
+}
+
+main {
+    display: flex;     
+}
+
+.card {
+    /* box-sizing: border-box; */
+    /* border: 2px solid blue; */
+    height: 400px;
+    width: 250px;
+    padding: 30px; 
+    position: relative;
+}
+.card-heading {
+    /* color: white; */
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    color: hsl(0, 0%, 95%);
+    margin: 30px auto; 
+    /* letter-spacing:  */
+}
+
+.card-info {
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsl(0, 0%, 95%);
+    font-size: 15px;
+}
+
+.card-1 {
+    background-color: hsl(31, 77%, 52%);
+}
+.card-2 {
+    background-color: hsl(184, 100%, 22%);
+}
+.card-3 {
+    background-color: hsl(179, 100%, 13%);
+}
+
+.card-button {
+    font-family: 'Lexend Deca', sans-serif;
+    display: inline-block;
+    /* border: 2px solid black; */
+    font-size: 12px;
+    text-align: center; 
+    padding: 15px 33px;
+    border-radius: 20px;
+    background-color: hsl(0, 0%, 95%);
+    position: absolute;
+    bottom: 40px;
+    left: 30px;
+
+}
+.card-1 .card-button {
+    color:hsl(31, 77%, 52%);
+}
+ 
+.card-2 .card-button {
+    color:hsl(184, 100%, 22%);
+}
+.card-3 .card-button {
+    color:hsl(179, 100%, 13%);
+}
+
+.card-1 .card-button:hover {
+    background-color:hsl(31, 77%, 52%);
+    color:hsl(0, 0%, 95%);
+    cursor: pointer;
+    border: 2px solid hsl(0, 0%, 95%);
+}
+.card-2 .card-button:hover {
+    background-color:hsl(184, 100%, 22%);
+    color:hsl(0, 0%, 95%);
+    border: 2px solid hsl(0, 0%, 95%); 
+    cursor: pointer; 
+}
+.card-3 .card-button:hover {
+    background-color:hsl(179, 100%, 13%);
+    color:hsl(0, 0%, 95%);
+    border: 2px solid hsl(0, 0%, 95%);
+    cursor: pointer; 
+}

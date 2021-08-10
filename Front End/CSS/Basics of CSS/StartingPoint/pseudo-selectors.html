@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article {
+            font-size: 1.5em;
+        } 
+        article p:first-child {
+            background-color: lime;
+            font-weight: bold;
+        }
+        article p:last-child {
+            background-color: lemonchiffon;
+        }
+        a {
+            font-size: 2em; 
+        }
+        a:hover {
+            color: yellow;
+        }
+        a:visited {
+            color: green;
+        }
+        article p::first-line {
+            color: green;
+        }
+        article p:first-child::first-line {
+            color: yellow;
+        }
+        article p:last-child::first-line {
+            color: hotpink;
+        }
+        article::before {
+            content: "This is will be before of article tag itself.";
+        }
+        article p:first-child::before {
+            content: "This will be before first paragraph tag."
+        }
+        article p:first-child::after {
+            content: "This will be after the first paragraph tag."
+        }
+        article p:first-child::before {
+            content: "➥";
+        }
+        article p:last-child::before {
+            content: "➥";
+        }
+        article p:first-child::before {
+            display: block;
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <p class="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid excepturi, nam neque natus distinctio deserunt veniam sed molestiae dicta laudantium adipisci? Molestias, iusto. Nisi suscipit voluptas odio pariatur, ratione magnam nam cum illo quaerat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, itaque perspiciatis. Possimus optio, aperiam modi dignissimos sapiente rerum, ab alias laudantium nihil harum iure corrupti explicabo fugit. Pariatur natus esse at laboriosam soluta ea?</p>
+    </article>
+    <a href="#">Hover over me</a>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event </title>
+    <style>
+        p {
+            color: purple;
+            margin: 0.5rem 0;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        button {
+            display: block;
+            margin: 20px 0px 20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <section class="preview"></section>
+    <button class="off">Machine is off</button>
+    <script>
+        let btn = document.querySelector('.off');
+        btn.addEventListener('click',function() {
+            if(btn.value === 'Machine is on') {
+                btn.value = 'Machine is off';
+            }else {
+                btn.value = 'Machine is on';
+            }
+        });
+    </script>
+</body>
+</html>

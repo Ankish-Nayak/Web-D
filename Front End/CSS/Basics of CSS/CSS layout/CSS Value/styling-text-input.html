@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>styling-text-input</title>
+    <style>
+        body {
+            width: 50%;
+            border: 1px solid black;
+        }
+        input[type="text"],
+        input[type="email"] {
+            border: 2px solid #000;
+            margin: 0 0 1.2em 0;
+            padding: 10px;
+            width: 70%;
+        }
+        input[type="submit"] {
+            border: 3px solid #333;
+            background-color: #999;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white; 
+            margin: 1em 50%;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name">
+        </div>
+        <div>
+            <label for="email">Email </label>
+            <input type="email" id="email">
+        </div>
+        <div class="buttons">
+            <input type="submit" value="submit">
+        </div>
+    </form>
+</body>
+</html>

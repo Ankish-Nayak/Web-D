@@ -1,0 +1,21 @@
+body {
+    width: 90%;
+    max-width: 900px;
+    margin: 2em auto;
+    font: .9em/1.2 Arial, Helvetica, sans-serif;
+}
+
+.container { 
+    column-count: 3;
+    column-gap: 20px; 
+    column-rule: 4px dotted lightblue;
+}
+.span {
+    border: 2px solid black;
+    background: rgb(118, 118, 204);
+    line-height: 40px;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    column-span: all;
+}

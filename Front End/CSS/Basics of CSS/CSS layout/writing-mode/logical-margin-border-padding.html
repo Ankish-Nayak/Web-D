@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Margin And All</title>
+    <style>
+        .wrapper {
+            display: flex;
+        }
+        .box {
+            margin: 20px;
+            padding: 10px;
+            writing-mode: horizontal-tb;
+            /* border: 2px solid black; */
+            inline-size: 200px;
+            block-size: 200px;
+        }
+        .box h2 {
+            text-decoration: underline;
+        }
+        .physical {
+            border-left: 1px solid black;
+            border-top: 10px solid palevioletred;
+            border-bottom: 10px double orange ;
+            border-right: 10px dotted rebeccapurple;
+        }
+        .logical {
+            border-inline-start: 1px solid black;
+            border-inline-end: 10px dotted rebeccapurple;
+            border-block-start: 10px solid palevioletred;
+            border-block-end: 10px double orange;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box physical">
+            <h2>Physical Properties</h2>
+            <p>A paragraph. Demostrating logical Properties in CSS.</p>
+        </div>
+        <div class="box logical">
+            <h2>Logical Properties</h2>
+            <p>A paragraph. Demostrating logical properties in CSS.</p>
+        </div>
+    </div>
+</body>
+</html>

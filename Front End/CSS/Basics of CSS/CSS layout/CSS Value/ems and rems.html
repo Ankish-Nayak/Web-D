@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ems and rems</title>
+    <style>
+        /* x em provide x times of it parent */
+        .ems li {
+            font-size: 2em;
+        }
+        /* x rem provide x times of it root element generally HTML */
+        .rems li {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <ul class="ems">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three
+            <ul>
+                <li>Three A</li>
+                <li>Three B</li>
+                <li><ul>
+                    <li>Three B 2</li>
+                </ul></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="rems">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three
+            <ul>
+                <li>Three A</li>
+                <li>Three B</li>
+                <li><ul>
+                    <li>Three B 2</li>
+                </ul></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

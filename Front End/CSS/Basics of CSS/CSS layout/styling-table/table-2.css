@@ -1,0 +1,17 @@
+table {
+    table-layout: fixed;
+    font-size: 1.2em;
+    border-collapse: collapse;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+td {
+    margin-top: 10px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #EEEEEE;
+}
+tbody tr:nth-child(2) {
+    text-align: "×" center;
+}

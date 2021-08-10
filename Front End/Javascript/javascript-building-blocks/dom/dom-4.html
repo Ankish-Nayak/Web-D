@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom-4</title>
+    <style>
+        body {
+            font-size: 1.2em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button { 
+            margin: 10px;
+            font-size: 1.1em;
+            border-radius: 5px;
+        }
+        .addItem {
+            background-color: green;
+            color: white;
+        }
+        .deleteItem {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>My shopping list</h1>
+    <label for="" class="enter">Enter a new item:</label>
+    <input type="text" class="item">
+    <button class="addItem">AddItem</button>
+    <ul></ul>
+    <script>
+        const input = document.querySelector('input');
+        const btn = document.querySelector('button');
+        const list = document.querySelector('ul');
+        let delarray;
+        btn.addEventListener('click',function(){
+            let value = input.value;
+            input.focus();
+            input.value = '';
+            let del = document.createElement('button');
+            del.textContent = 'Delete';
+            del.setAttribute('class', 'deleteItem');
+            let span = document.createElement('span');
+            span.textContent = value;
+            let listItem = document.createElement('li');
+            listItem.appendChild(span);
+            listItem.appendChild(del);
+            list.appendChild(listItem); 
+            del.addEventListener('click', function(){
+                listItem.removeChild(span);
+                listItem.removeChild(del);
+                list.removeChild(listItem);
+            });
+        }); 
+    </script>
+</body>
+</html>

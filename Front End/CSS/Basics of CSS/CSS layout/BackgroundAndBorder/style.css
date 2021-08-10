@@ -1,0 +1,14 @@
+.box {
+    width: 200px;
+    height: 200px;
+}
+
+.a {
+    background-image: url(Ballon.webp);
+}
+
+.b {
+    background-image: url(favicon-16x16.png);
+    background-repeat: no-repeat;
+    background-position: top 20px right 20px;
+}

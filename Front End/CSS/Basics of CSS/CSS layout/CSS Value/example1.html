@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        div {
+            padding: 10px;
+            margin: 10px;
+            border: 4px solid blue;
+            background-color: lightblue;
+            font-size: 1.2em;
+        }
+        .box-1 {
+            width: 160px;
+        }
+        .box-2 {
+            width: 10vw;
+        }
+        /* em do inherit width and multiply it by 10 here. */
+        .box-3 { 
+            width: 10em; 
+        }
+        /* rems is times of its root element */
+        .box-4 {
+            width: 10rem;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="box-1">I am 160px</div>
+        <div class="box-2">I am 10vw wide</div>
+        <div class="box-3">I am 10em wide</div>
+        <div class="box-4">I am 10rem wide</div>
+    </section>
+</body>
+</html>

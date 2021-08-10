@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WritingMode</title>
+    <style>
+        body {
+            display: flex;
+            font-weight: bold;
+        }
+        .box-1, .box-2 {
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid grey;
+        }
+        .box-1 {
+            display: inline-block;
+        }
+        .box-2{
+            /* display: inline-block; */
+            writing-mode: vertical-rl;
+        }
+    </style>
+</head>
+<body>
+    <article class="box-1">
+        <h2>Heading</h2>
+        <p>A paragrah. Demostrating Writing Modes in CSS</p>
+    </article>
+    <article class="box-2">
+        <h2>Heading</h2>
+        <p>A paragraph. Demostrating Writing Modes in CSS.</p>
+    </article>
+</body>
+</html>

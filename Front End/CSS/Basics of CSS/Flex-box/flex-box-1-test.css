@@ -1,0 +1,32 @@
+html {
+    font-family: sans-serif;
+
+}  
+li {
+    margin: 0px;
+
+}
+nav ul {
+    list-style-type: none;
+}
+
+li a { 
+    outline: none;
+    text-decoration: none;
+    font-size: 1.4em;
+    color: rgb(233,222,212);
+    background-color: rgb(77,114,152);
+    border: 2px solid black;
+    width: 37%;
+    text-align: center; 
+    padding: 10px;
+    border-radius: 10px;
+}
+nav {
+    border: 1px solid black;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+}

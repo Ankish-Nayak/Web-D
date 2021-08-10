@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+        }
+        article {
+            margin: 20px;
+            padding: 20px;
+            font-weight: bold;
+            border: 1px solid grey;
+            /* display: inline-block; */
+        }
+        .horizontal {
+            inline-size: 80px;
+            writing-mode: horizontal-tb;
+        }
+        .vertical {
+            inline-size: 80px;
+            writing-mode: vertical-rl;
+        }
+    </style>
+</head>
+<body>
+    <article class="horizontal">
+        <h2>Heading</h2>
+        <p>A paragraph. Demostrating Writing Modes in CSS</p>
+        <p>These boxes have inline-size</p>
+    </article>
+    <article class="vertical">
+        <h2>Heading</h2>
+        <p>A paragraph. Demostrating Writing Modes in CSS</p>
+        <p>These boxes have inline-size</p>
+    </article>
+</body>
+</html>
