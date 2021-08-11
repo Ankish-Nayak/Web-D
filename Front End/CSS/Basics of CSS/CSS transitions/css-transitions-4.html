@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-transitions</title>
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            background: lightblue;
+            display: inline-block;
+            margin: 10px 40px;
+            font-size: 20px;
+            text-align: center;
+            transition-property: transform, background;
+        }
+        button {
+            padding: 10px;
+            line-height: 1.2;
+            font-size: 20px;
+            margin: 20px 100px;
+        }
+        .box-1{
+            transition-duration: 400ms;
+            transition-delay: 0ms; 
+        }
+        .box-2 {
+            transition-duration: 800ms;
+            transition-delay: 400ms;
+        }
+        .box-3 {
+            transition-duration: 1200ms;
+            transition-delay: 1200ms;
+        }
+        .animate {
+            transform: rotate(180deg);
+            background: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div class='box-1'>Transition-durations: 400ms</div>
+    <div class='box-2'>Transition-durations: 800ms</div>
+    <div class='box-3'>Transition-durations: 1200ms</div>
+    <button>Change Me</button>
+    <script>
+        const divs = document.querySelectorAll('div');
+        const btn = document.querySelector('button');
+        btn.addEventListener('click',function(){
+            if(divs[0].classList.contains('animate')){
+                for(let i = 0; i<divs.length; ++i){
+                    divs[i].classList.remove('animate');
+                }
+            }else{
+                for(let i = 0; i<divs.length; ++i){
+                    divs[i].classList.add('animate');
+                }
+            }
+        })
+    </script>
+</body>
+</html>

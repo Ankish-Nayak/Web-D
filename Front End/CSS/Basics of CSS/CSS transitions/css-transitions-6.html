@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-transitions</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+        }
+        nav { 
+            padding: 20px;
+            background-color: black;
+            display: flex;
+            justify-content: space-around
+        } 
+        a { 
+            display: inline-block;
+            border-radius: 20px;
+            border: 2px solid white; 
+            text-decoration: none;
+            color: white;
+            outline: none; 
+            width: 100px;  
+            padding: 10px 5px; 
+            text-align: center; 
+            font-size: 15px;   
+            transition: background 500ms,color 1000ms;
+            transition-timing-function: ease-out;
+        }
+        a:hover, a:focus, a:active {
+            background: white;
+            color: black;
+        } 
+    </style>
+</head>
+<body>
+    <nav> 
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Links</a> 
+    </nav>
+</body>
+</html>
