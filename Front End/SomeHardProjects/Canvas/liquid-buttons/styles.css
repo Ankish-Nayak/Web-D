@@ -37,8 +37,8 @@ button:hover {
 }
 
 button:hover:before {
-    background: linear-gradient(to-right, red, green blue);
-    filter: blur(10px) contrast();
+    background: linear-gradient(to right, red, green blue);
+    filter: url(wave);
 }
 
 @keyframes squish {

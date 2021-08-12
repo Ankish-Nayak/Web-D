@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-transitions-8</title>
+    <style>
+        .square {
+            box-sizing: border-box;
+            width: 150px;
+            height: 150px;
+            background: red;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            margin: 10px;
+            font-weight: bold;
+            padding: 20px 0px; 
+            transition-property: background, color, transform;
+            transition-duration: 1000ms;
+            transition-delay: 1000ms;
+        }
+        .square:hover {
+            background: white;
+            color: black;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="square">Hover On Me</div>
+    <div class="message"></div>
+    <script>
+        const message = document.querySelector('.message');
+        const el = document.querySelector('.square');
+        // transitionstart fired when element start showing transition 
+        el.addEventListener('transitionstart',function(){
+            message.textContent = 'Transitionstart Fired';     
+        })
+        // transitionend fired transition end 
+        el.addEventListener('transitionend',function(){
+            message.textContent = 'Transitionend fired';
+        })
+        // transitionrun fired when transition start including delay time
+        el.addEventListener('transitionrun',function(){
+            message.textContent = 'Transitionrun Fired';
+        })
+        el.addEventListener('transitioncancel',function(){
+            message.textContent = 'Transitioncancel fired';
+        })  
+    </script>
+</body>
+</html>
