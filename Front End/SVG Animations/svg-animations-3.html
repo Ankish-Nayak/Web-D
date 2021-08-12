@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg-animations</title>
+</head>
+<body>
+    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <!-- M x y : used to place cursor for drawing path at point x and y absolute -->
+        <path d="M 10 10" />
+        <!-- H y: to make line horizontal to currx,  y -->
+        <!-- V x: to make line vertically to   x, curry  -->
+        <!-- L x y : to make line from curr point to new point  -->
+        <path d="M 10 10 H 90 V 90 H 10 L 10 10" fill="transparent" stroke="black" stroke-width="5" />
+        Points
+        <circle cx="10" cy="10" r="4" fill="red" />
+        <circle cx="90" cy="90" r="4" fill="red" />
+        <circle cx="90" cy="10" r="4" fill="red" />
+        <circle cx="10" cy="90" r="4" fill="red" />
+        <!-- Z : used for closing path to make shape that means it joins our last point made to first point madex -->
+    </svg>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg-animations</title>
+</head>
+<body> 
+    <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+        <!-- C x1 y1, x2 y2, x y: draws cubic curve start with curr currsor point to x y and whereas x1 y1 are control point for start point and x2 y2 is control point for end point -->
+        <!-- <path d="M 10 10 C 20 20, 40 20, 50 10" stroke="black" fill="transparent"/> 
+        <path d="M 70 10 C 70 20, 110 20, 110 10" stroke="black" fill="transparent"/>
+        <path d="M 130 10 C 120 20, 180 20, 170 10" stroke="black" fill="transparent"/>
+        <path d="M 10 60 C 20 80, 40 80, 50 60" stroke="black" fill="transparent"/>
+        <path d="M 70 60 C 70 80, 110 80, 110 60" stroke="black" fill="transparent"/>
+        <path d="M 130 60 C 120 80, 180 80, 170 60" stroke="black" fill="transparent"/>
+        <path d="M 10 110 C 20 140, 40 140, 50 110" stroke="black" fill="transparent"/>
+        <path d="M 70 110 C 70 140, 110 140, 110 110" stroke="black" fill="transparent"/>
+        <path d="M 130 110 C 120 140, 180 140, 170 110" stroke="black" fill="transparent"/> -->
+        <!-- S x2 y2, x y: used to connect curve it takes control point for end point and start point is cursor point and its control point is reflection point of previous curve drawn there it must be come just after any curve that is C or S -->
+        <!-- <path d="M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" stroke="black" fill="transparent" /> -->
+
+        <!-- Q x1 y1 x y: quadratic curve are simple curve its has only one control point for start and end point that is x1 y1 and end point is x y whereas start point is cursor point -->
+        <path d="M 10 80 Q 95 10 180 80" stroke="black" fill="transparent" />
+      </svg>
+    
+</body>
+</html>
