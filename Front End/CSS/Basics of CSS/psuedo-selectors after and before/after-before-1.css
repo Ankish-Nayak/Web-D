@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Unica+One|Vollkorn');
+  
+   
+
+body {
+  font-size: 1em;
+  text-align: center;
+  color: rgba(black, .7);
+  font-family: 'Vollkorn';
+  line-height: 1.4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Unica One;
+  text-transform: uppercase;
+  color: #c31;
+}
+
+ 
+h2 {
+  margin-top: 1.2em;
+  margin-bottom: 0;
+}
+blockquote::before {
+  content: open-quote;
+  color: #c31;
+}
+blockquote::after{
+  content: close-quote;
+  color: #c31;
+}
+p {
+  margin-top: .25em;
+}
+
+a {
+  color: #c31;
+}
+
+.intro {
+  font-size: 5rem;
+} 
+blockquote {
+ }
+
+/* a[data-tool-tip] {
+  position: relative;
+ions {
+  paddin-tool-tip]::after {
+  content: attr(data-tool-tip);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  boirer-radius: 5px;
+  background: $clr-gray;
+  padding: 1em 3em;
+  display: block;
+  white-space: nowrap;
+  color: white;
+  font-size: 0.8em; 
+  transform: scale(0);
+  transition: transform ease-in 150ms,
+              bottom ease-in 150ms;
+} */
+
+a[data-tool-tip]:hover::after {
+  transform: scale(1);
+  bottom: 100%;
+}
+.counters {
+  background: lightgray;
+  text-align: left;
+  padding: 5em 8em;
+  margin-top: 7em;
+  counter-reset: counter-name;
+}
+.section {
+  position: relative;
+}
+
+.section::before {
+  counter-increment: counter-name;
+  content: counter(counter-name);
+  position: absolute;
+  left: -2.5em;
+  top: -.5em;
+  background: white;
+  width: 2em;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 3px solid rgba(black, .7); 
+}
+.counters {
+  counter-reset: ordered-list;  
+}
+.counters ol {
+  list-style-type: none;
+}
+
+.counters li::before {
+  counter-increment: ordered-list;
+  content: 'list-item ' counter(ordered-list) ') ';
+  font-size: .8em;
+  color: #c31;
+}
+ 

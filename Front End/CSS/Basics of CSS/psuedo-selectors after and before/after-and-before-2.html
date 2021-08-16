@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>after and before</title>
+    <style>
+        div { 
+            width: 100%; 
+            height: 100vh;
+            position: relative;
+        }
+        p {
+            font-size: 2em;
+            font-weight: bold; 
+            letter-spacing: 2px; 
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate( -50%, -50%); 
+            z-index: 1;
+            padding: 20px;
+        }
+
+        p::before {
+            content: ''; 
+            display: inline-block; 
+            background: white; 
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: -1; 
+        }
+
+        p::after {
+            content: ''; 
+            display: inline-block;
+            background: lightblue;
+            width: 100vw;
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            top: 0; 
+            transform: translate( -50%, 0);
+            z-index: -2;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>Ankish Nayak</p>
+    </div>
+</body>
+</html>
