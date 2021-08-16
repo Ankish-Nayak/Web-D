@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter-reset</title>
+    <style>
+         
+        .container {
+            display: flex; 
+            background: rgba(211, 211, 211, 0.4);
+            padding: 40px;
+            width: max-content;
+            margin: 0px auto;
+        }
+        div.result {
+            counter-reset: counter-name 0;
+            padding: 20px;
+            background: white;
+        }
+        div.result p {
+            font-size: 1.2em;
+            font-weight: bold; 
+        }
+        div.result p::before { 
+            content: "Chapter " counter(counter-name) ") ";
+            counter-increment: counter-name 1;
+        }
+        .different p:nth-child(1) {
+            background: rebeccapurple;
+            opacity: 0.8;
+            color: white;
+            display: inline;
+        }
+        .different {
+            counter-reset: counter-name-1 2; 
+        }
+        .different p::before{
+            content: "Chapter " counter(counter-name-1) ") ";
+            counter-increment: counter-name-1 1;
+        }
+        div.input {
+            font-size: 1.2em; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;  
+            padding: 20px; 
+            height: max-content; 
+        }
+        div.input p {
+            display: inline-block;
+            font-size: 1.2em;
+            width: 100%; 
+            border: 2px solid lightgrey; 
+            border-left: 5px solid lightgrey;
+            margin: 0px;
+            margin-top: 15px;
+            background: white; 
+        }
+        div.input p:hover { 
+            outline: 2px solid rebeccapurple;
+        }
+        div.input p span {
+            color: rgb(235, 52, 19);
+        }  
+
+        .reset {
+            font-size: 1.2em;
+            background: #ADD8E6;
+            align-self: baseline;
+            font-weight: 700;
+            padding: 10px;
+            margin-left: 20px;
+        }
+        .reset:hover {
+            background: rgba(173, 216, 230, 0.5);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class='result'>
+            <h2>Alice's Adventures in Wonderland</h2>
+            <p>Down the Rabbit-Hole</p>
+            <div class="different">
+                <p>The Pool of Tears</p>
+                <p>A Caucus-Race and a Long Tale</p>
+                <p>The Rabbit Sends in a Little Bill</p>
+            </div> 
+        </div>
+        <div class="input">
+            <p><span>counter-reset</span>:  none;</p>
+             <p><span>counter-reset</span>: chapter-count 0;</p>
+             <p><span>counter-reset</span>:  chapter-count;</p>
+             <p><span>counter-reset</span>: chapter-count 5;</p>
+             <p><span>counter-reset</span>: chapter-count -5;</p>
+        </div>
+        <div class="reset">reset</div>
+    </div>
+    <script>
+        const start = document.querySelector('.different');
+        const options = document.querySelectorAll('.input p');
+        const reset = document.querySelector('.reset');
+        options[0].style.background = '#ADD8E6';
+        reset.addEventListener('click',function(){
+            for(let i = 0; i<options.length; ++i){
+                options[i].style.background = 'white';
+            }
+            options[0].style.background = '#ADD8E6';
+            start.style.counterReset = 'none'; 
+        });
+        console.log(start);
+        console.log(options); 
+
+        for(let i = 0; i<options.length; ++i){
+            options[i].addEventListener('click',function(){ 
+                for(let j = 0; j<options.length; ++j){
+                    if(i != j){
+                        options[j].style.background = 'white';
+                    }else{
+                        options[i].style.background = '#ADD8E6';
+                    }
+                }
+                switch(i) { 
+                    case 0:
+                        start.style.counterReset = 'none';
+                        break;
+                    case 1:
+                        start.style.counterReset =  'counter-name' + " 0";
+                        break;
+                    case 2:
+                        start.style.counterReset =  'counter-name';
+                        break;
+                    case 3:
+                        start.style.counterReset =  'counter-name' + " 5";
+                        break;
+                    case 4:
+                        start.style.counterReset =  'counter-name' + " -5";
+                        break;
+                    default:
+                        break;
+                }
+            });
+        }
+    </script>
+</body>
+</html> 
