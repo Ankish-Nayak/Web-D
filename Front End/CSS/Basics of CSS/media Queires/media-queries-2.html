@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media queries</title>
+    <style>
+        body {
+            background: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        div {
+            font-size: 1.2em;
+            font-weight: bold;
+            border: 1px solid blue;
+            width: 200px;
+            text-align: center;
+        }
+        div p {
+            display: inline-block;
+        }
+        div p span:first-child {
+            /* color: white; */
+        }
+        @media (orientation: landscape) {
+            body {
+                color: rebeccapurple;
+            }
+        }
+    </style>
+</head>
+<body> 
+    <div>
+        <p><span>View-port-width: </span><span class='width'>1440px</span></p>
+    </div>
+    <script>
+        const width = document.querySelector('.width');
+        window.addEventListener('resize',function(){
+            width.textContent = window.innerWidth;
+            console.log(width);
+        });
+
+    </script>
+</body>
+</html>

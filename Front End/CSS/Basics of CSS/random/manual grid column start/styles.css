@@ -1,0 +1,99 @@
+:root {
+    --light-grey: #F4F4F4;
+    --light-lime: #53CAFF;
+    --border-color: grey;
+    --border-color-hover: rgb(59, 57, 57);
+    --border-color-active: blue;
+} 
+main {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    background: var(--light-grey);
+    position: relative;
+    justify-content: space-around;
+} 
+
+.input { 
+    height: 200px;
+    /* width: 200px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* padding-left: 20px;
+    background: var(--light-grey); */
+} 
+.input > div {
+    background: white;
+    border: 2px solid var(--border-color);
+    border-left: 4px solid var(--border-color);
+    margin-left: 20px; 
+    transition: border-color 100ms 0s;
+}
+.input  div:hover {
+    /* border-color: blue; */
+    border-color: var(--border-color-hover);
+}
+ 
+.input  p {
+    font-size: 1.155em;
+    padding: 10px 5px;
+    margin: 0px;
+}
+.input p span:first-child {
+    color: red;
+}
+
+/* divs inside wrapper */
+ 
+.wrapper {
+    background: white;
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat( 3, 1fr); 
+    grid-auto-rows: 30px;
+    grid-gap: 5px;
+    padding: 5px;
+    
+}
+.one { 
+    background: rgba(101, 52, 151, 0.2);
+    border: 3px solid rebeccapurple;
+    height: max-content;
+    transition: grid-column-start 200ms 0s;
+    grid-column-start: auto;
+}
+.two {
+    background: rgba(101, 52, 151, 0.2);
+    border: 3px solid rebeccapurple;
+    height: max-content;
+}
+.three {
+    background: rgba(101, 52, 151, 0.2);
+    border: 3px solid rebeccapurple;
+    height: max-content;
+}
+
+/* reset button */
+
+.reset {
+    font-size: 1.2em;
+    font-weight: bold;
+    background: var(--light-lime);
+    padding: 7px 15px; 
+    position: absolute;
+    right: 20px;
+    top: 7px;
+    cursor: default;
+    transition: background 100ms 0s, color 100ms 0s;
+}
+
+.reset:hover {
+    background: black;
+    color: white;
+}
