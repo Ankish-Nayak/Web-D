@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asyncrounous</title>
+    <style>
+        input {
+            margin-left: 50px;
+            font-size: 15px;
+            font-weight: 700;
+        }
+        .greet {
+            display: block;
+            width: 150px;
+            margin: 10px;
+        }
+        .cancelGreet {
+            display: block;
+            width: 150px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Give someone a greeting!</h1>
+    <label for="name">Enter a name: </label>
+    <input type="text">
+    <button class="greet">Greet!</button>
+    <button class="cancelGreet">Cancel Greeting</button>
+    <script>
+        const greet = document.querySelector('.greet');
+        const cancelGreet = document.querySelector('.cancelGreet');
+        const input = document.querySelector('input');
+        cancelGreet.disabled = true;
+        function sayHi(name){
+            alert(`Hi ${name}.`);
+            cancelGreet.disabled = true;
+        }
+        let myGreeting;
+        greet.addEventListener('click',function(){
+            cancelGreet.disabled = false;
+            myGreeting = setTimeout(sayHi, 4000, input.value);
+        })
+
+        cancelGreet.addEventListener('click',function(){
+            clearTimeout(myGreeting);
+            console.log('Greeting cancelled');
+            cancelGreet.disabled = true;
+        }); 
+    </script>
+</body>
+</html>

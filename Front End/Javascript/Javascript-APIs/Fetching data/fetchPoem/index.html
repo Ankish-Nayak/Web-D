@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching poem</title>
+    <style>
+        body {
+            position: relative;
+        }
+        section {
+            margin: 0 auto;
+            width: 400px;
+            border: 2px  solid grey;
+            text-align: justify;
+            padding: 20px;
+        }
+        p {
+            font-size: 20px;
+        }
+        div {
+            position: absolute; 
+            font-size: 18px; 
+            border: 2px solid black;
+            padding: 5px 10px;
+            border-radius: 15px; 
+            cursor: pointer;
+        }
+        .buttonAdd {
+            left: 100px;
+            top: 100px;
+        }
+        .buttonRemove {
+            right: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class='buttonAdd'>Fetch Poem</div>
+    <section>
+        <p>Poem will display here.</p>
+    </section>
+    <div class="buttonRemove">Remove Poem</div>
+    <script>
+        const section = document.querySelector('section');
+        const addBtn = document.querySelector('.buttonAdd');
+        const removeBtn = document.querySelector('.buttonRemove');
+        addBtn.addEventListener('click',function(){
+            displayText();
+        })
+        async function displayText(){
+            while(section.firstChild){
+                section.removeChild(section.firstChild);
+            }
+            let response = await fetch('poem.txt');
+            let poemTxt = await response.text();
+            const para = document.createElement('p');
+            para.textContent = poemTxt;
+            section.appendChild(para);
+        }
+        removeBtn.addEventListener('click', function(){
+            while(section.firstChild){
+                section.removeChild(section.firstChild);
+            }
+        })
+    </script>
+</body>
+</html>

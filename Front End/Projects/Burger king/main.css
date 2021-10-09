@@ -1,0 +1,294 @@
+:root {
+    --orange: orange;
+    --green: rgb(9, 139, 9);
+}
+.centered {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    /* background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(img/carousel-1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;  */
+}
+.home {  
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(img/carousel-1.jpg);
+    background-size: cover;
+    border: 1px solid blue;
+    margin: 0px 70px; 
+    height: 100vh;
+    position: relative; 
+    /* position: absolute;
+    top: 0px;  */
+}
+/* .home-overlay {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color:black;
+    opacity: 0.5;
+} */
+nav {
+    box-sizing: border-box;
+    /* margin: 10px; */
+    /* margin-left: 70px;
+    margin-right: 70px; */
+    /* margin-top: 40px; */
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    padding-left: 70px;
+    padding-right: 70px;
+    border: 1px solid blue;
+    z-index: 1;
+}
+nav .logo p{ 
+    font-size: 50px;
+    font-weight: 700;
+    display: inline-block; 
+    margin: 0px;
+    padding: 0px;
+}
+nav .logo {
+    display: inline-block; 
+}
+nav .logo p  span:first-child{
+    color: var(--orange);
+}
+nav .logo p span:last-child {
+    color: var(--green);
+    transition: color 200ms;
+}
+
+nav .logo p span:last-child:hover {
+    color: var(--orange);
+}
+nav .navigation {
+    display: inline;
+}
+nav .navigation ul {
+    display: inline-block;
+    position: absolute;
+    right: 70px; 
+}
+nav .navigation ul li{ 
+    display: inline;
+}
+
+nav .navigation li a {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    border: 1px solid blue;
+    padding: 0px 15px;
+    transition: color 200ms ease-in;
+}  
+nav .navigation li .pages {
+    display: none;
+    /* visibility: hidden; */
+}
+nav .navigation li .pages p{
+    background: white;
+    color: black;
+    margin: 0px;
+    padding: 0px;   
+}
+nav .navigation li a:hover {
+    color: var(--orange);
+}
+
+.home .home-card {
+    border: 1px solid blue;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 230px;
+} 
+
+.home .home-card-heading h1 { 
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    color: white; 
+    margin-top: 0px;
+}
+.home .home-card-content {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    text-align: center; 
+}
+
+.home .home-card-heading span {
+    color: var(--orange);
+}
+.home .home-card-buttons {
+    border: 1px solid blue;
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%,0%);
+}
+
+.home .home-card-btn-menu { 
+    display: inline-block;
+    padding: 11px 23px;
+    border-radius: 5px;
+    background: var(--orange);
+    margin-right: 10px;
+    border: 2px solid var(--orange);
+    transition: background 300ms;
+}
+.home .home-card-btn-menu:hover {
+    background: none;
+}
+.home .home-card-btn-book { 
+    display: inline-block;
+    padding: 11px 23px;
+    border-radius: 5px;
+    background: var(--green);
+    border: 2px solid var(--green); 
+    transition: background 300ms;
+}
+.home .home-card-btn-book:hover {
+    background: none;
+}
+
+.booking {
+    background: rgb(233, 231, 231);
+    display: flex;
+    padding: 0px 70px;
+}
+
+.aboutBooking { 
+    padding: 100px 100px;
+    padding-right: 50px;
+    width: 700px;
+}
+
+.booking-heading {
+    font-size: 20px;
+    color: var(--green);
+}
+
+.booking-subheading {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 10px 0px;
+}
+
+.booking-content {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.booking-form { 
+    background: var(--orange); 
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    justify-content: space-around;
+    align-items: center;
+}
+.booking-form input {
+    background: var(--orange);
+    font-size: 18px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 7px;
+    padding: 10px 0px;
+    padding-left: 10px; 
+    width: 350px;
+    margin: 0px 20px;
+}
+
+.booking-form input::placeholder {
+    color: white;
+}
+
+.booking-form .submit {
+    color: var(--orange);
+    background: white;
+    transition: color 400ms, background 400ms;
+}
+
+.booking-form .submit:hover {
+    color: white;
+    background: var(--orange);
+}
+
+.about {
+    padding: 100px 170px;
+    display: relative; 
+}  
+.about-img {
+    float: left;
+    margin-right: 20px;
+    width: 472px;
+    height: 550px;
+    border: 2px solid red;
+    display: relative;
+}
+.about img {
+    float: left;
+    border-radius: 15px;
+    margin-right: 30px;
+    height: 550px;
+    z-index: -1;
+}
+.about-play-btn {
+    width: 100px;
+    height: 100px;
+    background: var(--orange);
+    position: absolute;
+    left: 24%;
+    top: 53%;
+    border-radius: 100px;
+    /* transform: translate(-50%,-50%); */
+    z-index: 1;
+}
+.about-heading {
+    margin-top: 110px;
+    font-size: 20px;
+    color: var(--green);
+} 
+
+.about-subheading {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 10px 0px;
+}
+
+.about-content {
+    font-size: 15px;
+    line-height: 1.6;
+}
+.book {
+    background: var(--orange);
+    margin-top: 50px;
+    padding: 20px 25px;
+    display: inline-block;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 2px solid var(--orange);
+    transition: background 200ms ease-in, color 200ms ease-in;
+}
+.book:hover {
+    background: white;
+    color: var(--orange);
+}
+.fake {
+    height: 1000px;
+}

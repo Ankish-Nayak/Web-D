@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching Images</title>
+    <style>
+        section {
+            border: 1px solid blue;
+            width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around; 
+        }
+        img {
+            margin: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        div {
+            position: absolute; 
+            font-size: 18px; 
+            border: 2px solid black;
+            padding: 5px 10px;
+            border-radius: 15px; 
+            cursor: pointer;
+        }
+        .buttonAdd {
+            left: 100px;
+            top: 100px;
+        }
+        .buttonRemove {
+            right: 100px;
+            top: 100px;
+        } 
+    </style>
+</head>
+<body>
+    <div class="buttonAdd">Add Images</div>
+    <section>
+
+    </section>
+    <div class="buttonRemove">Remove Images</div>
+    <script>
+        const section = document.querySelector('section');
+        const fileNames = ['beans.jpg','hotdogs.jpg','kidney.jpg','mushypeas.jpg','spam.jpg','tomato.jpg'];
+        const addImages = document.querySelector('.buttonAdd');
+        const removeImages = document.querySelector('.buttonRemove'); 
+        addImages.addEventListener('click',function(){
+            displayImages();
+            console.log('images Displayed');
+        });
+
+        removeImages.addEventListener('click',function(){
+            while(section.firstChild){
+                section.removeChild(section.firstChild);
+            }
+        });
+
+        async function displayImages(){ 
+            for(let i = 0; i<fileNames.length; ++i){
+                let image = document.createElement('img');
+                let response = await fetch(`images/${fileNames[i]}`);
+                let blob = await response.blob();
+                image.src = URL.createObjectURL(blob);
+                image.style.width = '400px';
+                section.appendChild(image);
+            } 
+        } 
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+body {
+    background: black;
+}
+.clock {
+    position: absolute;
+    color: limegreen;
+    font-size: 3.5em;
+    font-family: Orbitron;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        li {
+            margin-bottom: 10px;
+        }
+        li button {
+            font-size: 8px;
+            margin-left: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>My shopping list</h1>
+
+    <div>
+        <label for="item">Enter a new item:</label>
+        <input type="text" name='item' id='item'>
+        <button class='add'>Add Item</button>
+        <button class='delete'>Delete Item</button>
+    </div>
+    <ul>
+
+    </ul>
+
+    <script>
+        const list = document.querySelector('ul');
+        const addBtn = document.querySelector('.add');
+        const input = document.querySelector('input');
+        const deleteBtn = document.querySelector('.delete');
+
+        addBtn.addEventListener('click',function(){
+            let listItem = document.createElement('li');
+            listItem.textContent = input.value;
+            list.appendChild(listItem);
+            console.log(list);
+        });
+        deleteBtn.addEventListener('click',function(){
+            let found = false;
+            let deleteItem;
+            let listItems = list.children;
+            for(let i = 0; i<listItems.length; ++i){
+                if(listItems[i].textContent.toLowerCase() === input.value.toLowerCase()){
+                    found |= true;
+                    deleteItem = listItems[i];
+                    break;
+                }
+            }
+            if(found){
+                list.removeChild(deleteItem);
+            }
+            input.focus();
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asyncrounous</title>
+    <style>
+        p {
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <p class="clock"></p>
+    <button>Stop Clock</button>
+    <script>
+        const p = document.querySelector('.clock');
+        const btn = document.querySelector('button');
+        function displayTime(){
+            let date = new Date();
+            let time = date.toLocaleTimeString();
+            p.textContent = time;
+        }
+        displayTime();
+        const createClock = setInterval( displayTime, 1000);
+        btn.addEventListener('click',function(){
+            clearInterval(createClock);
+            btn.disabled = true;
+        })
+    </script>
+</body>
+</html>

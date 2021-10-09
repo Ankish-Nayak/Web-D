@@ -1,0 +1,160 @@
+body {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.clock {
+    background: black;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.innerClock {
+    background: white;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.h3, .h6, .h9, .h12 {
+    font-size: 30px;
+    font-weight: 900;
+}
+.h12 {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%,0);
+    margin-top: 20px;
+}
+.h3 {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translate(0,-50%);
+    margin-right: 30px;
+}
+.h6 {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%,0);
+    margin-bottom: 30px;
+}
+.h9 {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translate(0,-50%);
+    margin-left: 30px;
+}
+/* .diallines {
+    position: relative;
+} */
+.diallines {
+    background: rgb(5, 5, 5);
+    width: 4px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    margin-left: -3px;
+    transform-origin: 50% 160px;
+    z-index: 2;
+    /* transform: translate(-50%,0); */
+    /* margin-left: -200px; */
+}
+.diallines:nth-of-type(5n-1) {
+    height: 30px;
+    
+    background: rgb(5, 5, 5);
+    width: 4px;
+    /* height: 20px; */
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    z-index: 2;
+    transform-origin: 50% 160px;
+    /* transform: translate(-50%,0); */
+}
+.dot {
+    background: black;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.second {
+    background: black;
+    position: absolute;
+    width: 4px;
+    height: 110px;
+    left: 158px;
+    top: 50px; 
+    z-index: 7; 
+    /* transform: translate(-50%, 0); */
+    transform-origin: 2px 115px;  
+    /* transform: rotate(30deg); */
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px; 
+}
+.hour {
+    background: black; 
+    width: 4px;
+    height: 70px; 
+    position: absolute;
+    left: 158px;
+    top: 90px;
+    z-index: 5;
+    transform-origin: 2px 75px;
+    /* transform: rotate(60deg);  */
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.minute {
+    background: black;
+    position: absolute;
+    width: 4px;
+    height: 100px;
+    left: 158px;
+    top: 60px;
+    z-index: 6;
+    transform-origin: 2px 105px;
+    /* transform: translate(-50%,0); */
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.date {
+    background: beige; 
+    border-radius: 20px;
+    position: absolute;
+    left: 50%; 
+    top: 80px;
+    transform: translate(-50%,0);
+    text-align: center; 
+    font-size: 18px;
+    padding: 5px 25px;
+    /* z-index: -3; */
+}
+.day {
+    background: beige;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    bottom: 80px;
+    transform: translate(-50%,0);
+    font-size: 18px;
+    padding: 5px 25px;
+}
